@@ -1,0 +1,37 @@
+.accordion {
+  & > summary {
+    //display: block;
+    //
+    //&::-webkit-details-marker {
+    //  display: none;
+    //}
+    //
+    //&::before {
+    //  content: "►";
+    //  font-size: 1rem;
+    //  display: flex;
+    //  align-items: center;
+    //  margin-right: 0.5rem;
+    //  transition: rotate 200ms ease-out;
+    //}
+  }
+
+  &::details-content {
+    color: red;
+    overflow: hidden;
+    max-height: 1.5rem;
+    transition: max-height 400ms ease-out;
+  }
+
+  &[open] {
+    max-height: 10rem;
+
+    &::details-content {
+      max-height: 99rem;
+    }
+
+    //& summary::before {
+    //  rotate: 90deg;
+    //}
+  }
+}

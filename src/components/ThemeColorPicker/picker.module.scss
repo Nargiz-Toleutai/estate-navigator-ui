@@ -1,0 +1,140 @@
+.themeColorPicker {
+  position: fixed;
+  top: 2px;
+  right: 2px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 8px;
+  background: #dfdfdf;
+  color: #1f1f22;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.33;
+  animation: attract 10s infinite;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1),
+  2px 2px 8px rgba(0, 0, 0, 0.075),
+  3px 3px 16px rgba(0, 0, 0, 0.05);
+
+  summary {
+    user-select: none;
+    font-size: 14px;
+  }
+
+  &:global.dirty {
+    animation: none;
+    opacity: 0.15;
+  }
+
+  &:hover, &[open] {
+    opacity: 1;
+    animation: appear 200ms ease-out;
+  }
+
+  & > div {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+
+      input {
+        margin: 2px 4px;
+        flex-grow: 1;
+        height: 32px;
+        cursor: pointer;
+      }
+
+      button {
+        font-size: 8px;
+        margin-top: 4px;
+        padding: 2px 4px;
+        background: #f1f1f1;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: background 200ms ease-out;
+
+        &:hover {
+          background: #e1e1e1;
+        }
+
+        &:active {
+          background: #d1d1d1;
+        }
+      }
+    }
+  }
+
+  @keyframes attract {
+    0% {
+      opacity: 0.33;
+      transform: translateX(0) translateY(0);
+    }
+    24% {
+      opacity: 0.33;
+      transform: translateX(0) translateY(0);
+    }
+    26% {
+      opacity: 0.6;
+      transform: translateX(-6px) translateY(6px);
+    }
+    28% {
+      opacity: 0.33;
+      transform: translateX(0) translateY(0);
+    }
+    30% {
+      opacity: 0.75;
+      transform: translateX(-8px) translateY(8px);
+    }
+    32% {
+      opacity: 0.33;
+      transform: translateX(0) translateY(0);
+    }
+    54% {
+      opacity: 0.33;
+      transform: translateX(0) translateY(0);
+    }
+    56% {
+      opacity: 0.6;
+      transform: translateX(-6px) translateY(6px);
+    }
+    58% {
+      opacity: 0.33;
+      transform: translateX(0) translateY(0);
+    }
+    60% {
+      opacity: 0.75;
+      transform: translateX(-2px) translateY(10px);
+    }
+    62% {
+      opacity: 0.33;
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      opacity: 0.33;
+      transform: translateX(0) translateY(0);
+    }
+  };
+
+  @keyframes appear {
+    0% {
+      opacity: 0.33;
+    }
+    100% {
+      opacity: 1;
+    }
+
+  }
+}
