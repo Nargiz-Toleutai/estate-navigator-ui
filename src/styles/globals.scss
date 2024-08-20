@@ -61,19 +61,21 @@
     var(--color-primary-set-color-3) 79.28%,
     var(--color-primary-set-color-4) 95.45%
   );
+  --common-text-color: #1f1f22;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --navigation-underline-color: #e7e8ec;
+    --banner-background-color: #0000;
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --navigation-underline-color: #e7e8ec;
-  }
-}
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --navigation-underline-color: #e7e8ec;
+//   }
+// }
 
 * {
   -webkit-font-smoothing: antialiased;
