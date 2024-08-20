@@ -8,6 +8,7 @@ import ThemeColorPicker from "@/components/ThemeColorPicker/picker";
 import { Toaster } from "react-hot-toast";
 import Navigation from "@/components/LandingNavigation";
 import LandingNavigation from "@/components/LandingNavigation";
+import Banner from "@/components/Banner";
 
 // import Accordion from "@/components/Accordion/accordion";
 
@@ -44,49 +45,7 @@ export default function Home() {
       <Toaster position="top-center" />
 
       <LandingNavigation />
-
-      <section className={styles.banner}>
-        <div className={styles.container}>
-          <div className={styles.bannerContent}>
-            <div className={styles.bannerInfo}>
-              <h1>
-                <span>
-                  <span>
-                    Быстрая проверка&nbsp;
-                    <br />
-                  </span>
-                  возможности&nbsp;
-                  <br />
-                  открытия ПВЗ
-                </span>
-              </h1>
-              <div>
-                <span>
-                  Отчет за 15 секунд&nbsp;
-                  <br />
-                  Результат — <span>за 0 ₽</span>
-                </span>
-              </div>
-              <CommonButton link="#search">Проверить</CommonButton>
-            </div>
-            <div className={styles.bannerMedia}>
-              <video
-                playsInline
-                autoPlay
-                loop
-                muted
-                preload="auto"
-                controlsList="nodownload"
-              >
-                <source
-                  src="https://www.esphere.ru/upload/videos/255/a0cth0094tpq0w1zweqcrnr1lv97frkc/Find_docs_SPFL_600x600.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Banner />
 
       <section id="check" className={styles.check}>
         <div className={styles.container}>
