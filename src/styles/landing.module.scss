@@ -29,6 +29,9 @@
     position: absolute;
     width: calc(100% - 30px);
   }
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .logo {
