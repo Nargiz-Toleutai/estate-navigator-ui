@@ -72,7 +72,7 @@
 
 .banner {
   margin-top: 56px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--banner-background-color);
   background-image: linear-gradient(
     1turn,
     rgb(242, 244, 247),
@@ -162,7 +162,7 @@
     font-weight: 700;
     height: auto;
     line-height: 44px;
-    outline-color: rgb(31, 31, 34);
+    outline-color: var(--common-text-color);
     text-align: center;
   }
 
@@ -302,7 +302,7 @@
     font-weight: 700;
     height: auto;
     line-height: 44px;
-    outline-color: rgb(31, 31, 34);
+    outline-color: var(--common-text-color);
     text-align: center;
   }
 
@@ -413,7 +413,7 @@
     font-weight: 700;
     height: auto;
     line-height: 44px;
-    outline-color: rgb(31, 31, 34);
+    outline-color: var(--common-text-color);
     text-align: center;
   }
 
@@ -498,5 +498,20 @@
       margin: 20px 0;
       width: 25%;
     }
+  }
+}
+
+@media (max-width: 583px) {
+  .bannerMedia {
+    display: none;
+  }
+  .banner {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 901px) {
+  .bannerMedia {
+    display: block;
   }
 }
