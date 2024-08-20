@@ -5,3 +5,6 @@ build:
   stage: build
   script:
     - docker build --tag perfectpoint-test .
+  tags:
+    - build
+    - mbp
