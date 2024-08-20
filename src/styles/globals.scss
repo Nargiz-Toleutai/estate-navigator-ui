@@ -3,11 +3,16 @@
   font-style: normal;
   font-weight: 400;
   src: url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.eot");
-  src: url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.svg#SB Sans Text")format("svg");
+  src: url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.svg#SB Sans Text")
+      format("svg");
 }
 
 @font-face {
@@ -15,11 +20,16 @@
   font-style: normal;
   font-weight: 600;
   src: url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.eot");
-  src: url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.svg#SB Sans Text Semibold")format("svg");
+  src: url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cf8ad58acbe94cc96c1196fa2d336b14.svg#SB Sans Text Semibold")
+      format("svg");
 }
 
 @font-face {
@@ -27,29 +37,41 @@
   font-style: normal;
   font-weight: 700;
   src: url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.eot");
-  src: url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.svg#SB Sans Text Bold")format("svg");
+  src: url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/83b12a31c07f085253263bbd591f5a18.svg#SB Sans Text Bold")
+      format("svg");
 }
 
 :root {
-  --color-primary-set-color-1: #2870F6;
-  --color-primary-set-color-2: #1E90FF;
-  --color-primary-set-color-3: #20B5B6;
-  --color-primary-set-color-4: #25BC98;
+  --color-primary-set-color-1: #2870f6;
+  --color-primary-set-color-2: #1e90ff;
+  --color-primary-set-color-3: #20b5b6;
+  --color-primary-set-color-4: #25bc98;
   --color-primary-gradient: linear-gradient(
-                  272.97deg,
-                  var(--color-primary-set-color-1),
-                  var(--color-primary-set-color-2) 58.6%,
-                  var(--color-primary-set-color-3) 79.28%,
-                  var(--color-primary-set-color-4) 95.45%
+    272.97deg,
+    var(--color-primary-set-color-1),
+    var(--color-primary-set-color-2) 58.6%,
+    var(--color-primary-set-color-3) 79.28%,
+    var(--color-primary-set-color-4) 95.45%
   );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --navigation-underline-color: #e7e8ec;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --navigation-underline-color: #e7e8ec;
   }
 }
 
