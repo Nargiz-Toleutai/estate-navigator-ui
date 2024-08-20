@@ -7,16 +7,6 @@
   width: 100%;
 }
 
-.navigation {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  z-index: 1000;
-}
-
 .navigationContent {
   position: relative;
   margin-left: -15px;
@@ -30,7 +20,7 @@
   align-items: center;
 
   &::after {
-    background-color: #e7e8ec;
+    background-color: var(--navigation-underline-color);
     bottom: 0;
     content: "";
     height: 1px;
@@ -39,37 +29,40 @@
     position: absolute;
     width: calc(100% - 30px);
   }
+}
 
+.logo {
+  padding: 0 15px;
+  color: #00347a;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
-  & > div:first-child {
-    padding: 0 15px;
-    color: #00347a;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
+.navLinks {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  padding: 0 15px;
 
-  ul {
-    padding: 0 15px;
+  a {
+    color: #565b62;
+    font-size: 14px;
+    margin: 0 15px;
+    padding: 20px 0;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
 
-    display: flex;
-    flex: 0 1 auto;
-    flex-direction: row;
+    &:hover {
+      color: var(--color-primary-set-color-1);
+    }
 
-    li {
-      list-style: none;
-      color: #565b62;
-      font-size: 14px;
-      margin: 0 15px;
-      padding: 20px 0;
-      position: relative;
-      white-space: nowrap;
-
-
-      a {
-        text-decoration: none;
-        cursor: pointer;
-      }
+    &:active,
+    &:focus,
+    &.active {
+      color: var(--color-primary-set-color-2);
     }
   }
 }
@@ -77,7 +70,11 @@
 .banner {
   margin-top: 56px;
   background-color: rgba(0, 0, 0, 0);
-  background-image: linear-gradient(1turn, rgb(242, 244, 247), rgba(242, 244, 247, 0) 41.35%);
+  background-image: linear-gradient(
+    1turn,
+    rgb(242, 244, 247),
+    rgba(242, 244, 247, 0) 41.35%
+  );
   background-origin: padding-box;
   background-position-x: 0;
   background-position-y: 0;
@@ -340,9 +337,8 @@
         padding: 36px;
         border-radius: 50%;
         box-shadow: 0px 1px 2px rgba(3, 7, 18, 0.01),
-        0px 5px 8px rgba(3, 7, 18, 0.02),
-        0px 12px 18px rgba(3, 7, 18, 0.03),
-        0px 20px 32px rgba(3, 7, 18, 0.04);
+          0px 5px 8px rgba(3, 7, 18, 0.02), 0px 12px 18px rgba(3, 7, 18, 0.03),
+          0px 20px 32px rgba(3, 7, 18, 0.04);
       }
     }
   }
