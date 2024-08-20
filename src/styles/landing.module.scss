@@ -507,6 +507,9 @@
   .banner {
     margin-top: 0;
   }
+  .bannerInfo {
+    flex-basis: 100%;
+  }
 }
 
 @media (min-width: 901px) {
