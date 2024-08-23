@@ -1,6 +1,25 @@
 import Image from "next/image";
 import styles from "./sources.module.scss";
 
+const SOURCES = [
+  {
+    title: "Wildberries",
+    logo: "/media/logos/wildberries.png",
+  },
+  {
+    title: "Ozon",
+    logo: "/media/logos/ozon.png",
+  },
+  {
+    title: "Yandex Market",
+    logo: "/media/logos/yandexmarket.png",
+  },
+  {
+    title: "Avito",
+    logo: "/media/logos/avito.png",
+  },
+];
+
 const Sources = () => {
   return (
     <section id="sources" className={styles.sources}>
@@ -8,24 +27,7 @@ const Sources = () => {
         <div className={styles.sourcesContent}>
           <h2>Наши партнеры</h2>
           <ul>
-            {[
-              {
-                title: "Wildberries",
-                logo: "/media/logos/wildberries.png",
-              },
-              {
-                title: "Ozon",
-                logo: "/media/logos/ozon.png",
-              },
-              {
-                title: "Yandex Market",
-                logo: "/media/logos/yandexmarket.png",
-              },
-              {
-                title: "Avito",
-                logo: "/media/logos/avito.png",
-              },
-            ].map((source, index) => (
+            {SOURCES.map((source, index) => (
               <li key={index}>
                 <div>
                   <Image src={source.logo} alt="" width={100} height={100} />
