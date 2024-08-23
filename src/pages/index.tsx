@@ -6,9 +6,9 @@ import Image from "next/image";
 import { FormEvent } from "react";
 import ThemeColorPicker from "@/components/ThemeColorPicker/picker";
 import { Toaster } from "react-hot-toast";
-import Navigation from "@/components/LandingNavigation";
-import LandingNavigation from "@/components/LandingNavigation";
-import Banner from "@/components/Banner";
+import LandingNavigation from "@/components/LandingNavigation/LandingNavigation";
+import Banner from "@/components/Banner/Banner";
+import Check from "@/components/Check/Check";
 
 // import Accordion from "@/components/Accordion/accordion";
 
@@ -46,8 +46,9 @@ export default function Home() {
 
       <LandingNavigation />
       <Banner />
+      <Check />
 
-      <section id="check" className={styles.check}>
+      {/* <section id="check" className={styles.check}>
         <div className={styles.container}>
           <div className={styles.checkContent}>
             <h2>Что получите в отчете</h2>
@@ -78,9 +79,9 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="work" className={styles.work}>
+      {/*  <section id="work" className={styles.work}>
         <div className={styles.container}>
           <div className={styles.workContent}>
             <div className={styles.workInfo}>
@@ -231,7 +232,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
       <ThemeColorPicker />
     </>
