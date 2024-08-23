@@ -1,3 +1,4 @@
+import LandingContainer from "../LandingContainer/LandingContainer";
 import styles from "./landing-navigation.module.scss";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ const NAV_LINKS = [
 export default function LandingNavigation() {
   return (
     <section className={styles.navigation}>
-      <div className={styles.container}>
+      <LandingContainer>
         <nav className={styles.navigationContent}>
           <div className={styles.logo}>Perfect Point</div>
           <ul className={styles.navLinks}>
@@ -21,7 +22,7 @@ export default function LandingNavigation() {
             ))}
           </ul>
         </nav>
-      </div>
+      </LandingContainer>
     </section>
   );
 }
