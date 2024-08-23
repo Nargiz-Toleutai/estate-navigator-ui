@@ -1,3 +1,4 @@
+@use "../../styles/mixins.scss";
 @import "../../styles/mixins";
 
 .banner {
@@ -23,9 +24,6 @@
   align-items: center;
 
   min-height: 280px;
-  margin: 0 auto;
-  max-width: 1140px;
-  padding: 0 15px;
 }
 
 .bannerInfo {
@@ -34,9 +32,7 @@
   & > h1 {
     margin-bottom: 20px;
 
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: bold;
+    @include mixins.header3;
     color: var(--common-text-color);
 
     & > span {
@@ -47,8 +43,7 @@
   }
 
   & > div {
-    font-size: 16px;
-    line-height: 20px;
+    @include mixins.secondary;
     margin-bottom: 30px;
 
     & > span {

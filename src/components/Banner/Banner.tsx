@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./banner.module.scss";
 import CommonButton from "@/components/CommonButton/button";
+import LandingContainer from "../LandingContainer/LandingContainer";
 
 export default function Banner() {
   return (
     <section className={styles.banner}>
-      <div className={styles.container}>
+      <LandingContainer>
         <div className={styles.bannerContent}>
           <div className={styles.bannerInfo}>
             <h1>
@@ -46,7 +47,7 @@ export default function Banner() {
             </video>
           </div>
         </div>
-      </div>
+      </LandingContainer>
     </section>
   );
 }
