@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import CommonButton from "../CommonButton/button";
+import LandingContainer from "../LandingContainer/LandingContainer";
 import styles from "./work.module.scss";
 
 const ACTION_LIST = [
@@ -11,7 +12,7 @@ const ACTION_LIST = [
 const Work = () => {
   return (
     <section id="work" className={styles.work}>
-      <div className={styles.container}>
+      <LandingContainer>
         <div className={styles.workContent}>
           <h2>Это работает так</h2>
           <div className={styles.workWrapper}>
@@ -34,7 +35,7 @@ const Work = () => {
             </div>
           </div>
         </div>
-      </div>
+      </LandingContainer>
     </section>
   );
 };
