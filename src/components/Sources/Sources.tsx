@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./sources.module.scss";
+import LandingContainer from "../LandingContainer/LandingContainer";
 
 const SOURCES = [
   {
@@ -23,7 +24,7 @@ const SOURCES = [
 const Sources = () => {
   return (
     <section id="sources" className={styles.sources}>
-      <div className={styles.container}>
+      <LandingContainer>
         <div className={styles.sourcesContent}>
           <h2>Наши партнеры</h2>
           <ul>
@@ -37,7 +38,7 @@ const Sources = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </LandingContainer>
     </section>
   );
 };

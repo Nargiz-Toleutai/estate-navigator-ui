@@ -1,18 +1,19 @@
+@use "../../styles/mixins.scss";
+
 .sources {
-  margin: 0 auto;
-  max-width: 1140px;
-  width: 100%;
-  padding: 70px 15px;
+  padding: 70px 0 70px;
+
+  @media (max-width: 583px) {
+    padding: 50px 0 50px;
+  }
 }
 
 .sourcesContent {
   width: 100%;
 
   h2 {
-    font-size: 36px;
-    font-weight: 700;
+    @include mixins.header3;
     height: auto;
-    line-height: 44px;
     outline-color: var(--common-text-color);
     text-align: center;
   }
@@ -39,8 +40,7 @@
 
       h3 {
         margin-top: 34px;
-        font-size: 24px;
-        font-weight: 600;
+        @include mixins.header4;
         height: auto;
         line-height: 30px;
         text-align: center;
