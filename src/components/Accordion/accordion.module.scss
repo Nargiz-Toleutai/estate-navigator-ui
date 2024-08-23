@@ -1,37 +1,26 @@
+@use "../../styles//mixins.scss";
+
 .accordion {
-  & > summary {
-    //display: block;
-    //
-    //&::-webkit-details-marker {
-    //  display: none;
-    //}
-    //
-    //&::before {
-    //  content: "►";
-    //  font-size: 1rem;
-    //  display: flex;
-    //  align-items: center;
-    //  margin-right: 0.5rem;
-    //  transition: rotate 200ms ease-out;
-    //}
-  }
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--color-primary-set-color-8);
 
-  &::details-content {
-    color: red;
-    overflow: hidden;
-    max-height: 1.5rem;
-    transition: max-height 400ms ease-out;
-  }
+  p {
+    margin-top: 12px;
+    @include mixins.secondaryHigh;
 
-  &[open] {
-    max-height: 10rem;
-
-    &::details-content {
-      max-height: 99rem;
+    b {
+      font-weight: 600;
     }
+  }
 
-    //& summary::before {
-    //  rotate: 90deg;
-    //}
+  summary {
+    cursor: pointer;
+
+    h4 {
+      display: inline;
+      @include mixins.header4;
+    }
   }
 }
