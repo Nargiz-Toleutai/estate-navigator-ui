@@ -1,0 +1,29 @@
+@use "@/styles/mixins.scss";
+
+.faq {
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  padding: 70px 15px;
+
+  @media (max-width: 583px) {
+    padding: 50px 15px;
+  }
+}
+
+.faqContent {
+  width: 100%;
+
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    @include mixins.header3;
+    outline-color: var(--common-text-color);
+    text-align: center;
+  }
+
+  & > div {
+    margin-top: 50px;
+  }
+}
