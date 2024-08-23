@@ -1,0 +1,101 @@
+@import "../../styles/mixins";
+
+.banner {
+  margin-top: 56px;
+  background-image: linear-gradient(
+    1turn,
+    rgb(242, 244, 247),
+    rgba(242, 244, 247, 0) 41.35%
+  );
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.bannerContent {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 570px;
+  display: flex;
+  align-items: center;
+
+  min-height: 280px;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 15px;
+}
+
+.bannerInfo {
+  flex-basis: 50%;
+
+  & > h1 {
+    margin-bottom: 20px;
+
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: bold;
+    color: var(--common-text-color);
+
+    & > span {
+      & > span {
+        @include primary-text;
+      }
+    }
+  }
+
+  & > div {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 30px;
+
+    & > span {
+      & > span {
+        @include primary-text;
+        font-weight: 600;
+      }
+    }
+  }
+
+  a {
+    margin-top: 16px;
+  }
+}
+
+.bannerMedia {
+  flex-basis: 50%;
+  max-width: 50%;
+  overflow: hidden;
+
+  video {
+    max-height: 570px;
+  }
+}
+
+@media (max-width: 583px) {
+  .bannerMedia {
+    display: none;
+  }
+  .banner {
+    margin-top: 0;
+  }
+  .bannerInfo {
+    flex-basis: 100%;
+
+    .bannerButton {
+      width: 100%;
+    }
+  }
+  .bannerContent {
+    height: 24rem;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 901px) {
+  .bannerMedia {
+    display: block;
+  }
+}
