@@ -1,13 +1,10 @@
 @use "@/styles/mixins.scss";
 
 .faq {
-  margin: 0 auto;
-  max-width: 1140px;
-  width: 100%;
-  padding: 70px 15px;
+  padding: 70px 0 70px;
 
   @media (max-width: 583px) {
-    padding: 50px 15px;
+    padding: 50px 0 50px;
   }
 }
 

@@ -1,4 +1,5 @@
 import Accordion from "../Accordion/accordion";
+import LandingContainer from "../LandingContainer/LandingContainer";
 import styles from "./faq.module.scss";
 
 const FAQ_ITEMS = [
@@ -36,7 +37,7 @@ const FAQ_ITEMS = [
 const Faq = () => {
   return (
     <section id="faq" className={styles.faq}>
-      <div className={styles.container}>
+      <LandingContainer>
         <div className={styles.faqContent}>
           <h2>Часто задаваемые вопросы</h2>
           <div>
@@ -47,7 +48,7 @@ const Faq = () => {
             ))}
           </div>
         </div>
-      </div>
+      </LandingContainer>
     </section>
   );
 };
