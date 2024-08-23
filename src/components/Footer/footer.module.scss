@@ -1,0 +1,95 @@
+@use "../../styles/mixins.scss";
+
+.footer {
+  background: var(--color-primary-set-color-8);
+  padding: 40px 0;
+
+  h3 {
+    @include mixins.header4;
+  }
+
+  .footerInner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    @media (min-width: 583px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .footerInfo {
+    flex: 2;
+
+    p {
+      margin-left: 10rem;
+      max-width: 500px;
+      color: var(--secondary-text-color);
+    }
+  }
+
+  .footerContacts {
+    a {
+      color: var(--color-primary-set-color-5);
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+
+      &:hover {
+        color: var(--color-primary-set-color-1);
+      }
+    }
+  }
+
+  .footerLegal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    @media (min-width: 583px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footerPolicy {
+      p {
+        margin: 0;
+        color: var(--secondary-text-color);
+        @include mixins.note;
+
+        a {
+          color: var(--color-primary-set-color-5);
+          text-decoration: underline;
+
+          &:hover {
+            color: var(--color-primary-set-color-1);
+          }
+        }
+      }
+    }
+
+    .footerCopyright {
+      color: var(--secondary-text-color);
+      @include mixins.note;
+      text-align: left;
+
+      p {
+        margin: 5px 0;
+      }
+
+      @media (min-width: 583px) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.footerDivider {
+  border: 0.5px solid var(--color-primary-set-color-6);
+  margin: 20px 0;
+}
