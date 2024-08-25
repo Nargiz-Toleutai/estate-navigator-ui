@@ -14,8 +14,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination:
-          "http://MBP16-Maxim-Toleutai-personal.local:8080/api/:path*", // Proxy to Backend
+        destination: "http://localhost:8080/api/:path*", // Proxy to Backend
       },
     ];
   },
