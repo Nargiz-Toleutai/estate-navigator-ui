@@ -1,0 +1,94 @@
+@use "../../styles/mixins.scss";
+@import "../../styles/mixins.scss";
+
+.footer {
+  background: var(--color-secondary-set-3);
+  padding: 40px 0;
+
+  h3 {
+    @include mixins.header4;
+  }
+
+  .footerInner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include for-phone-only {
+      flex-direction: column;
+    }
+  }
+
+  .footerInfo {
+    flex: 2;
+
+    p {
+      margin-left: 10rem;
+      max-width: 500px;
+      color: var(--secondary-text-color);
+    }
+  }
+
+  .footerContacts {
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+
+      &:hover {
+        color: var(--color-primary-set-1);
+      }
+    }
+  }
+
+  .footerLegal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    @include for-phone-only {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footerPolicy {
+      p {
+        margin: 0;
+        color: var(--secondary-text-color);
+        @include mixins.note;
+
+        a {
+          color: var(--accent-color);
+          text-decoration: underline;
+
+          &:hover {
+            color: var(--color-primary-set-1);
+          }
+        }
+      }
+    }
+
+    .footerCopyright {
+      color: var(--secondary-text-color);
+      @include mixins.note;
+      text-align: right;
+
+      p {
+        margin: 5px 0;
+      }
+
+      @include for-phone-only {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.footerDivider {
+  border: 0.5px solid var(--color-secondary-set-1);
+  margin: 20px 0;
+}
