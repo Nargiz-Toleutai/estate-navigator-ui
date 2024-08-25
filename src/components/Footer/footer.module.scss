@@ -2,7 +2,7 @@
 @import "../../styles/mixins.scss";
 
 .footer {
-  background: var(--color-primary-set-color-8);
+  background: var(--color-secondary-set-3);
   padding: 40px 0;
 
   h3 {
@@ -33,13 +33,13 @@
 
   .footerContacts {
     a {
-      color: var(--color-primary-set-color-5);
+      color: var(--accent-color);
       text-decoration: none;
       margin-top: 10px;
       display: inline-block;
 
       &:hover {
-        color: var(--color-primary-set-color-1);
+        color: var(--color-primary-set-1);
       }
     }
   }
@@ -62,11 +62,11 @@
         @include mixins.note;
 
         a {
-          color: var(--color-primary-set-color-5);
+          color: var(--accent-color);
           text-decoration: underline;
 
           &:hover {
-            color: var(--color-primary-set-color-1);
+            color: var(--color-primary-set-1);
           }
         }
       }
@@ -89,6 +89,6 @@
 }
 
 .footerDivider {
-  border: 0.5px solid var(--color-primary-set-color-6);
+  border: 0.5px solid var(--color-secondary-set-1);
   margin: 20px 0;
 }

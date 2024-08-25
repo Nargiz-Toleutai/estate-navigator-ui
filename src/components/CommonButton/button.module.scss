@@ -4,7 +4,7 @@
   position: relative;
   -ms-flex-pack: center;
   border-style: none;
-  color: var(--color-primary-set-color-7);
+  color: var(--color-secondary-set-2);
   cursor: pointer;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -35,7 +35,7 @@
 
 .buttonPrimary {
   span {
-    color: var(--color-primary-set-color-7);
+    color: var(--color-secondary-set-2);
   }
 }
 
@@ -51,7 +51,7 @@
     left: 1px;
     right: 1px;
     bottom: 1px;
-    background: var(--color-primary-set-color-7);
+    background: var(--color-secondary-set-2);
     border-radius: 50px;
   }
 }
