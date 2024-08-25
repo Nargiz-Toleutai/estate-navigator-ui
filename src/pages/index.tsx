@@ -1,9 +1,4 @@
 import Head from "next/head";
-import styles from "@/styles/landing.module.scss";
-import CommonButton from "@/components/CommonButton/button";
-import { useRouter } from "next/navigation";
-import Image from "next/image";
-import { FormEvent } from "react";
 import ThemeColorPicker from "@/components/ThemeColorPicker/picker";
 import { Toaster } from "react-hot-toast";
 import LandingNavigation from "@/components/LandingNavigation/LandingNavigation";
