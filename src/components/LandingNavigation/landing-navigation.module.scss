@@ -40,6 +40,11 @@
   color: var(--accent-color);
   @include mixins.secondary;
   text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .navLinks {
