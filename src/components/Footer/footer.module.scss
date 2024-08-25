@@ -1,4 +1,5 @@
 @use "../../styles/mixins.scss";
+@import "../../styles/mixins.scss";
 
 .footer {
   background: var(--color-primary-set-color-8);
@@ -10,14 +11,13 @@
 
   .footerInner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
 
-    @media (min-width: 583px) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
+    @include for-phone-only {
+      flex-direction: column;
     }
   }
 
@@ -46,14 +46,13 @@
 
   .footerLegal {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
 
-    @media (min-width: 583px) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+    @include for-phone-only {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .footerPolicy {
@@ -76,14 +75,14 @@
     .footerCopyright {
       color: var(--secondary-text-color);
       @include mixins.note;
-      text-align: left;
+      text-align: right;
 
       p {
         margin: 5px 0;
       }
 
-      @media (min-width: 583px) {
-        text-align: right;
+      @include for-phone-only {
+        text-align: left;
       }
     }
   }
