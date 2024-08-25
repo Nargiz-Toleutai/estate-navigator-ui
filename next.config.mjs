@@ -1,5 +1,5 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
@@ -8,16 +8,17 @@ const __dirname = path.dirname(__filename); // get the name of the directory
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
   async rewrites() {
     return [
       {
-        source: '/api/:path*',
-        destination: 'http://localhost:8080/api/:path*' // Proxy to Backend
-      }
-    ]
-  }
+        source: "/api/:path*",
+        destination:
+          "http://MBP16-Maxim-Toleutai-personal.local:8080/api/:path*", // Proxy to Backend
+      },
+    ];
+  },
 };
 
 export default nextConfig;
