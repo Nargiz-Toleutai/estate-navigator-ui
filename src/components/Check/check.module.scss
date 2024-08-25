@@ -1,0 +1,83 @@
+@use "../../styles/mixins.scss";
+@import "../../styles/mixins";
+
+.check {
+  padding: 70px 0 70px;
+
+  @include for-phone-only {
+    padding: 50px 0 50px;
+  }
+}
+
+.checkContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    @include mixins.header3;
+    height: auto;
+    line-height: 44px;
+    outline-color: var(--common-text-color);
+    text-align: center;
+  }
+
+  ul {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0;
+      padding: 0;
+      width: 25%;
+
+      h3 {
+        margin-top: 34px;
+        margin-bottom: 12px;
+
+        @include mixins.header4;
+        height: auto;
+        line-height: 30px;
+        text-align: center;
+
+        @include primary-text;
+      }
+
+      p {
+        @include mixins.noteHigh;
+        height: auto;
+        line-height: 19px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include for-phone-only {
+  .check {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .checkContent ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    li:nth-child(2) {
+      margin-top: 2rem;
+    }
+  }
+}
