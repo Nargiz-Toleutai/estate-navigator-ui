@@ -10,9 +10,8 @@
 
 .faqContent {
   width: 100%;
-
+  display: flex;
   flex-direction: column;
-  align-items: center;
 
   h2 {
     @include mixins.header3;
@@ -20,7 +19,8 @@
     text-align: center;
   }
 
-  & > div {
-    margin-top: 50px;
+  li {
+    list-style: none;
+    margin-top: 20px;
   }
 }
