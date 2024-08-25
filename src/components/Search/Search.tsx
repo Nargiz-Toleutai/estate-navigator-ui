@@ -2,7 +2,6 @@ import { checkAvitoRealEstateUrl } from "@/utils";
 import CommonButton from "../CommonButton/button";
 import LandingContainer from "../LandingContainer/LandingContainer";
 import styles from "./search.module.scss";
-import { SearchProps } from "./types";
 import { useRouter } from "next/router";
 import { FormEvent } from "react";
 
