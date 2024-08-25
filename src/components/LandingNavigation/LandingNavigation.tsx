@@ -13,7 +13,9 @@ export default function LandingNavigation() {
     <section className={styles.navigation}>
       <LandingContainer>
         <nav className={styles.navigationContent}>
-          <div className={styles.logo}>Perfect Point</div>
+          <div className={styles.logo}>
+            <Link href={"/"}>Perfect Point</Link>
+          </div>
           <ul className={styles.navLinks}>
             {NAV_LINKS.map((nav, index) => (
               <li key={index}>
