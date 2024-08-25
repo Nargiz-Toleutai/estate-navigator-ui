@@ -69,12 +69,11 @@
   --secondary-text-color: #565b62;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --navigation-underline-color: #e7e8ec;
-    --banner-background-color: #0000;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+
+//   }
+// }
 
 // @media (prefers-color-scheme: light) {
 //   :root {
