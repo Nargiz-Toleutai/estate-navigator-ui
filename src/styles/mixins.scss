@@ -96,3 +96,15 @@ $font-family: "SB Sans Text";
 @mixin button {
   @include base-body(400, 8px, 16px, 0.02em);
 }
+
+@mixin for-phone-only {
+  @media (max-width: 583px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 901px) {
+    @content;
+  }
+}
