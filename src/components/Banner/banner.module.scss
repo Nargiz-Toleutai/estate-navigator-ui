@@ -69,7 +69,7 @@
   }
 }
 
-@media (max-width: 583px) {
+@include for-phone-only {
   .bannerMedia {
     display: none;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-@media (min-width: 901px) {
+@include for-desktop-up {
   .bannerMedia {
     display: block;
   }
