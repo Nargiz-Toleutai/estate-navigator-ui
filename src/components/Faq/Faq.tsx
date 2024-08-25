@@ -40,13 +40,15 @@ const Faq = () => {
       <LandingContainer>
         <div className={styles.faqContent}>
           <h2>Часто задаваемые вопросы</h2>
-          <div>
+          <ul>
             {FAQ_ITEMS.map((faq, index) => (
-              <Accordion key={index} title={<h4>{faq.question}</h4>} name="faq">
-                <p dangerouslySetInnerHTML={{ __html: faq.answer }} />
-              </Accordion>
+              <li key={index}>
+                <Accordion title={<h4>{faq.question}</h4>} name="faq">
+                  <p dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                </Accordion>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </LandingContainer>
     </section>
