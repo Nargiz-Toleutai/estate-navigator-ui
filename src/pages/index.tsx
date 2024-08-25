@@ -15,32 +15,7 @@ import Search from "@/components/Search/Search";
 import Faq from "@/components/Faq/Faq";
 import Footer from "@/components/Footer/Footer";
 
-// import Accordion from "@/components/Accordion/accordion";
-
-function checkAvitoRealEstateUrl(url: string): boolean {
-  const pattern =
-    /^https:\/\/www\.avito\.ru\/.*?\/kommercheskaya_nedvizhimost\/[a-z0-9_\-.]+$/;
-  return pattern.test(url);
-}
-
 export default function Home() {
-  const router = useRouter();
-
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const form = event.currentTarget as HTMLFormElement;
-    const formData = new FormData(form);
-    const url = formData.get("url") as string;
-
-    if (!checkAvitoRealEstateUrl(url)) {
-      alert("Некорректная ссылка на объявление в Avito");
-      return;
-    }
-
-    router.push(`/reports/${btoa(url)}`);
-  };
-
   return (
     <>
       <Head>
@@ -52,7 +27,7 @@ export default function Home() {
       <Check />
       <Work />
       <Sources />
-      <Search onSubmit={onSubmit} />
+      <Search />
       <Faq />
       <Footer />
       <ThemeColorPicker />
