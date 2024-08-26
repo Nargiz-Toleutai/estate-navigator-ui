@@ -1,0 +1,16 @@
+@use "../../styles/mixins.scss";
+@import "../../styles/mixins";
+
+.marketplace {
+  margin-top: 76px;
+
+  h4 {
+    @include mixins.header4;
+    height: auto;
+  }
+
+  p {
+    @include mixins.secondaryHigh;
+    color: var(--common-text-color);
+  }
+}
