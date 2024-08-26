@@ -1,0 +1,102 @@
+@use "../../styles//mixins.scss";
+@import "../../styles//mixins.scss";
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  height: 100%;
+  flex-direction: column;
+
+  p {
+    padding-top: 15rem;
+    @include mixins.header6;
+  }
+}
+
+.loader {
+  transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+  transform-origin: 50% 50%;
+  border-radius: 50% 50% 50% 0;
+  padding: 0 3px 3px 0;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary-gradient);
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  margin: -2.2em 0 0 -1.3em;
+  -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.loader:after {
+  content: "";
+  width: 1em;
+  height: 1em;
+  margin: 1em 0 0 0.5em;
+  background: var(--color-secondary-set-2);
+  position: absolute;
+  border-radius: 50%;
+}
+
+.beacon {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.beacon:before,
+.beacon:after {
+  position: absolute;
+  content: "";
+  height: 3em;
+  width: 3em;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  background: var(--color-primary-gradient);
+  -webkit-animation: active 2s infinite linear;
+  -moz-animation: active 2s infinite linear;
+  animation: active 2s infinite linear;
+}
+
+.beacon:after {
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes active {
+  0% {
+    -webkit-transform: scale(0.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes active {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
