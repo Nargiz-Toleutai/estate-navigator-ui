@@ -37,13 +37,14 @@
 
 .logo {
   padding: 0 15px;
-  color: var(--accent-color);
+
   @include mixins.secondary;
   text-transform: uppercase;
 
   a {
     text-decoration: none;
     cursor: pointer;
+    color: var(--accent-color);
   }
 }
 
