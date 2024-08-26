@@ -1,0 +1,102 @@
+@use "../../styles//mixins.scss";
+@import "../../styles//mixins.scss";
+
+.adDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 4rem;
+
+  @include for-phone-only {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    li:nth-child(2) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.adContent {
+  margin: 0;
+  width: 48%;
+
+  @include for-phone-only {
+    width: 100%;
+  }
+  h2 {
+    @include mixins.header7;
+    height: auto;
+    margin-bottom: 46px;
+  }
+}
+
+.adAddress {
+  margin-bottom: 36px;
+  p {
+    @include mixins.secondaryHigh;
+    color: var(--common-text-color);
+  }
+}
+
+.adAddress,
+.adParams {
+  h3 {
+    margin-bottom: 24px;
+    @include mixins.header4;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+      @include mixins.secondary;
+      color: var(--secondary-text-color);
+      list-style: none;
+      margin: 4px 0;
+    }
+  }
+}
+
+.paramKey {
+  @include mixins.secondary;
+  margin-right: 8px;
+}
+
+.paramValue {
+  color: var(--common-text-color);
+}
+
+.adPhoto {
+  margin: 0;
+  width: 48%;
+  display: flex;
+  justify-content: flex-end;
+
+  @include for-phone-only {
+    width: 100%;
+  }
+}
+
+.photoImage {
+  margin: 0;
+
+  max-height: 600px;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  img {
+    width: 48%;
+  }
+
+  @include for-phone-only {
+    padding-bottom: 1rem;
+  }
+}

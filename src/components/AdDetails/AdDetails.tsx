@@ -1,33 +1,37 @@
 import styles from "./ad-details.module.scss";
 import { AdDetailsProps } from "./types";
 
-const AdDetails = ({ ad_data }: AdDetailsProps) => {
+const AdDetails = ({ data }: AdDetailsProps) => {
   return (
-    <div>
-      <h2>{ad_data.title}</h2>
-      <div>
-        <div>
+    <div className={styles.adDetailsContainer}>
+      <div className={styles.adContent}>
+        <h2>{data.title}</h2>
+        <div className={styles.adAddress}>
           <h3>Адрес</h3>
-          <p>{ad_data.address}</p>
+          <p>{data.address}</p>
         </div>
-        {ad_data.params?.raw && (
-          <div>
+        {data.params?.raw && (
+          <div className={styles.adParams}>
             <h3>Параметры</h3>
             <ul>
-              {Object.entries(ad_data.params.raw).map(([key, value]) => (
+              {Object.entries(data.params.raw).map(([key, value]) => (
                 <li key={key}>
-                  <span>{key}</span> {value as React.ReactNode}
+                  <span className={styles.paramKey}>{key}</span>
+                  <span className={styles.paramValue}>
+                    {value as React.ReactNode}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
         )}
       </div>
-      {ad_data.photos?.[0] && (
-        <div>
+      {data.photos?.[0] && (
+        <div className={styles.adPhoto}>
           <img
-            src={ad_data.photos?.[0].source}
-            alt={ad_data.photos?.[0].title}
+            src={data.photos?.[0].source}
+            alt={data.photos?.[0].title}
+            className={styles.photoImage}
           />
         </div>
       )}
