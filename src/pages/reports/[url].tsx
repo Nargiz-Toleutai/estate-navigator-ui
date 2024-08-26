@@ -75,7 +75,7 @@ export default function Report() {
               result={result}
               wildberries={wildberries}
               ozon={ozon}
-              yandexMarket={yandex_market}
+              yandexMarket={yandexMarket}
             />
           )}
         </LandingContainer>
