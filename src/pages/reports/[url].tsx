@@ -7,6 +7,8 @@ import LandingNavigation from "@/components/LandingNavigation/LandingNavigation"
 import Footer from "@/components/Footer/Footer";
 import LandingContainer from "@/components/LandingContainer/LandingContainer";
 import ReportContent from "@/components/ReportContent/ReportContent";
+import Loading from "@/components/Loading/Loading";
+import ErrorComponent from "@/components/ErrorComponent/ErrorComponent";
 
 export default function Report() {
   const router = useRouter();
@@ -18,7 +20,7 @@ export default function Report() {
 
   const wildberries = result?.point_data?.wildberries;
   const ozon = result?.point_data.ozon;
-  const yandex_market = result?.point_data.yandex;
+  const yandexMarket = result?.point_data.yandex;
 
   useEffect(() => {
     const base64url = router.query.url;
@@ -64,22 +66,20 @@ export default function Report() {
       </Head>
       <Toaster position="top-center" />
       <LandingNavigation />
-
-      {loading && <div className={styles.loading}>Загрузка...</div>}
-
       <div className={styles.report}>
         <LandingContainer>
+          {loading && <Loading />}
+          {error && <ErrorComponent />}
           {result && (
             <ReportContent
               result={result}
               wildberries={wildberries}
               ozon={ozon}
-              yandex_market={yandex_market}
+              yandexMarket={yandex_market}
             />
           )}
         </LandingContainer>
       </div>
-
       <Footer />
     </>
   );
