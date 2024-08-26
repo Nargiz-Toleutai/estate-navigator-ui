@@ -44,7 +44,7 @@ const Footer = () => {
 
           <div className={styles.footerCopyright}>
             <p>© 2024 Perfect Point. Все права защищены.</p>
-            <p>ООО "Perfect Point", ИНН 1234567890</p>
+            <p>ООО &quot;Perfect Point&ldquo;, ИНН 1234567890</p>
           </div>
         </div>
       </LandingContainer>
