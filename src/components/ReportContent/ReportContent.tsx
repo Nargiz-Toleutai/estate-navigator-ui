@@ -7,7 +7,7 @@ const ReportContent = ({
   result,
   wildberries,
   ozon,
-  yandex_market,
+  yandexMarket,
 }: ReportType) => {
   const marketplaces = [
     {
@@ -18,14 +18,14 @@ const ReportContent = ({
     { title: "Ozon", data: ozon, openCheck: (data: any) => data.allowed },
     {
       title: "Яндекс.Маркет",
-      data: yandex_market,
+      data: yandexMarket,
       openCheck: (data: any) => data.pointAvailability?.tariff === "SUBSIDY",
     },
   ];
 
   return (
     <div className={styles.reportContent}>
-      <AdDetails ad_data={result} />
+      <AdDetails data={result.ad_data} />
       <hr />
       {marketplaces.map(
         (marketplace, index) =>
