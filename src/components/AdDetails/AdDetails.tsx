@@ -2,6 +2,8 @@ import styles from "./ad-details.module.scss";
 import { AdDetailsProps } from "./types";
 
 const AdDetails = ({ data }: AdDetailsProps) => {
+  const coverPhoto: { source: string; title: string } | undefined =
+    data.photos?.[0];
   return (
     <div className={styles.adDetailsContainer}>
       <div className={styles.adContent}>
@@ -26,11 +28,11 @@ const AdDetails = ({ data }: AdDetailsProps) => {
           </div>
         )}
       </div>
-      {data.photos?.[0] && (
+      {coverPhoto && (
         <div className={styles.adPhoto}>
           <img
-            src={data.photos?.[0].source}
-            alt={data.photos?.[0].title}
+            src={coverPhoto.source}
+            alt={coverPhoto.title}
             className={styles.photoImage}
           />
         </div>
