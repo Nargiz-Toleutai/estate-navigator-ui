@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./check.module.scss";
-import LandingContainer from "../LandingContainer/LandingContainer";
+import Container from "@/components/Container/Container";
 
 const CHECK_CARDS = [
   {
@@ -20,7 +20,7 @@ const CHECK_CARDS = [
 const Check = () => {
   return (
     <section id="check" className={styles.check}>
-      <LandingContainer>
+      <Container>
         <div className={styles.checkContent}>
           <h2>Что получите в отчете</h2>
           <ul>
@@ -33,7 +33,7 @@ const Check = () => {
             ))}
           </ul>
         </div>
-      </LandingContainer>
+      </Container>
     </section>
   );
 };
