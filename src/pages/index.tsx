@@ -1,7 +1,7 @@
 import Head from "next/head";
 import ThemeColorPicker from "@/components/ThemeColorPicker/picker";
 import { Toaster } from "react-hot-toast";
-import LandingNavigation from "@/components/LandingNavigation/LandingNavigation";
+import TopBar from "@/components/TopBar/TopBar";
 import Banner from "@/components/Banner/Banner";
 import Check from "@/components/Check/Check";
 import Work from "@/components/Work/Work";
@@ -17,7 +17,7 @@ export default function Home() {
         <title>PerfectPoint.ai</title>
       </Head>
       <Toaster position="top-center" />
-      <LandingNavigation />
+      <TopBar />
       <Banner />
       <Check />
       <Work />
