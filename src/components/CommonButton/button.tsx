@@ -2,6 +2,7 @@ import styles from "./button.module.scss";
 import { useMemo } from "react";
 import { ButtonProps, kindToClassName } from "./types";
 import Link from "next/link";
+import { processClassNames } from "@/utils";
 
 export default function CommonButton(props: ButtonProps) {
   const {
@@ -21,7 +22,10 @@ export default function CommonButton(props: ButtonProps) {
 
   if (link) {
     return (
-      <Link className={classNames} href={link}>
+      <Link
+        className={processClassNames(styles.classNames, classNames)}
+        href={link}
+      >
         <span>{children}</span>
       </Link>
     );
