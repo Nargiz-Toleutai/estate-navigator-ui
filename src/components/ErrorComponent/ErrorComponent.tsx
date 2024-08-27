@@ -1,14 +1,17 @@
 import Image from "next/image";
 import styles from "./error.module.scss";
 import { useRouter } from "next/router";
+import CommonButton from "../CommonButton/button";
+import { ErrorProps } from "./types";
+import { processClassNames } from "@/utils";
 
-const ErrorComponent = () => {
+const ErrorComponent = ({ className }: ErrorProps) => {
   const router = useRouter();
   const handleRetry = () => {
     router.reload();
   };
   return (
-    <div className={styles.error}>
+    <div className={processClassNames(styles.error, className)}>
       <Image
         src="/media/error.png"
         alt="Error"
@@ -21,9 +24,11 @@ const ErrorComponent = () => {
         We encountered an issue while processing your request. Please try again
         later.
       </p>
-      <button className={styles.retryButton} onClick={handleRetry}>
+
+      <CommonButton className={styles.retryButton} onClick={handleRetry}>
         Retry
-      </button>
+      </CommonButton>
+
       <p>If the problem persists, please contact our support team.</p>
     </div>
   );
