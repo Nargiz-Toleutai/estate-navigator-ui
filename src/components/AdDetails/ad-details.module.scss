@@ -28,6 +28,7 @@
   @include for-phone-only {
     width: 100%;
   }
+
   h2 {
     @include mixins.header7;
     height: auto;
