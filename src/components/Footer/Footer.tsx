@@ -1,11 +1,13 @@
 import Link from "next/link";
-import LandingContainer from "../LandingContainer/LandingContainer";
+import Container from "@/components/Container/Container";
 import styles from "./footer.module.scss";
+import { processClassNames } from "@/utils";
+import { FooterProps } from "./types";
 
-const Footer = () => {
+const Footer = ({ className }: FooterProps) => {
   return (
-    <footer className={styles.footer}>
-      <LandingContainer>
+    <footer className={processClassNames(styles.footer, className)}>
+      <Container>
         <div className={styles.footerInner}>
           <div className={styles.footerBrand}>
             <h3>Perfect Point</h3>
@@ -47,7 +49,7 @@ const Footer = () => {
             <p>ООО &quot;Perfect Point&ldquo;, ИНН 1234567890</p>
           </div>
         </div>
-      </LandingContainer>
+      </Container>
     </footer>
   );
 };
