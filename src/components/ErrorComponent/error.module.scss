@@ -1,4 +1,5 @@
 @use "../../styles/mixins.scss";
+@import "../../styles/mixins.scss";
 
 .error {
   display: flex;
@@ -30,16 +31,8 @@
   opacity: 0.5;
 }
 
-.retryButton {
-  background-color: var(--color-primary-set-1);
-  color: var(--color-secondary-set-2);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.retryButton:hover {
-  background-color: var(--accent-color);
+@include for-phone-only {
+  .retryButton {
+    width: 100%;
+  }
 }
