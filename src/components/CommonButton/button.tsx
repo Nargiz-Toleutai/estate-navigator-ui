@@ -16,16 +16,13 @@ export default function CommonButton(props: ButtonProps) {
   } = props;
 
   const classNames = useMemo(
-    () => [styles.button, className, kindToClassName[kind]].join(" "),
+    () => processClassNames(styles.button, className, kindToClassName[kind]),
     [className, kind]
   );
 
   if (link) {
     return (
-      <Link
-        className={processClassNames(styles.classNames, classNames)}
-        href={link}
-      >
+      <Link className={classNames} href={link}>
         <span>{children}</span>
       </Link>
     );
