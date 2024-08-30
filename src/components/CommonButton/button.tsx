@@ -2,6 +2,7 @@ import styles from "./button.module.scss";
 import { useMemo } from "react";
 import { ButtonProps, kindToClassName } from "./types";
 import Link from "next/link";
+import { processClassNames } from "@/utils";
 
 export default function CommonButton(props: ButtonProps) {
   const {
@@ -15,7 +16,7 @@ export default function CommonButton(props: ButtonProps) {
   } = props;
 
   const classNames = useMemo(
-    () => [styles.button, className, kindToClassName[kind]].join(" "),
+    () => processClassNames(styles.button, className, kindToClassName[kind]),
     [className, kind]
   );
 

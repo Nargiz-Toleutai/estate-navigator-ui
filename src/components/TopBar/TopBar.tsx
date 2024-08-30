@@ -1,6 +1,8 @@
-import LandingContainer from "../LandingContainer/LandingContainer";
-import styles from "./landing-navigation.module.scss";
+import { processClassNames } from "@/utils";
+import Container from "../Container/Container";
+import styles from "./top-bar.module.scss";
 import Link from "next/link";
+import { TopBarProps } from "./types";
 
 const NAV_LINKS = [
   { title: "Описание", href: "#work" },
@@ -8,10 +10,10 @@ const NAV_LINKS = [
   { title: "Отчет", href: "#search" },
 ];
 
-export default function LandingNavigation() {
+export default function TopBar({ className }: TopBarProps) {
   return (
-    <section className={styles.navigation}>
-      <LandingContainer>
+    <section className={processClassNames(styles.navigation, className)}>
+      <Container>
         <nav className={styles.navigationContent}>
           <div className={styles.logo}>
             <Link href={"/"}>Perfect Point</Link>
@@ -24,7 +26,7 @@ export default function LandingNavigation() {
             ))}
           </ul>
         </nav>
-      </LandingContainer>
+      </Container>
     </section>
   );
 }

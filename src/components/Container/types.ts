@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
-export interface LandingContainerProps {
+export interface ContainerProps {
   children: ReactNode;
+  className?: string;
 }

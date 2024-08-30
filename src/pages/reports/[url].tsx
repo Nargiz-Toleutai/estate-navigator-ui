@@ -3,10 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import styles from "@/styles/report.module.scss";
 import { Toaster } from "react-hot-toast";
-import LandingNavigation from "@/components/LandingNavigation/LandingNavigation";
+import TopBar from "@/components/TopBar/TopBar";
 import Footer from "@/components/Footer/Footer";
-import LandingContainer from "@/components/LandingContainer/LandingContainer";
+import Container from "@/components/Container/Container";
 import ReportContent from "@/components/ReportContent/ReportContent";
+import Loading from "@/components/Loader/Loader";
+import ErrorComponent from "@/components/ErrorComponent/ErrorComponent";
 
 export default function Report() {
   const router = useRouter();
@@ -18,7 +20,7 @@ export default function Report() {
 
   const wildberries = result?.point_data?.wildberries;
   const ozon = result?.point_data.ozon;
-  const yandex_market = result?.point_data.yandex;
+  const yandexMarket = result?.point_data.yandex;
 
   useEffect(() => {
     const base64url = router.query.url;
@@ -63,23 +65,26 @@ export default function Report() {
         <title>PerfectPoint.ai</title>
       </Head>
       <Toaster position="top-center" />
-      <LandingNavigation />
-
-      {loading && <div className={styles.loading}>Загрузка...</div>}
-
+      <TopBar />
       <div className={styles.report}>
-        <LandingContainer>
+        <Container className={styles.reportContainer}>
+          {loading && (
+            <div className={styles.loaderContainer}>
+              <Loading />
+              <p>Формируем отчет, подождите...</p>
+            </div>
+          )}
+          {error && <ErrorComponent />}
           {result && (
             <ReportContent
               result={result}
               wildberries={wildberries}
               ozon={ozon}
-              yandex_market={yandex_market}
+              yandexMarket={yandexMarket}
             />
           )}
-        </LandingContainer>
+        </Container>
       </div>
-
       <Footer />
     </>
   );

@@ -52,6 +52,10 @@ $font-family: "SB Sans Text";
   @include base-header(700, 16px, 20px, 0.01em);
 }
 
+@mixin header7 {
+  @include base-header(600, 36px, 44px);
+}
+
 @mixin base-body($font-weight, $font-size, $line-height, $letter-spacing) {
   font-family: $font-family;
   font-style: normal;

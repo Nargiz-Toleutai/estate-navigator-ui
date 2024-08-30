@@ -1,6 +1,6 @@
 import { checkAvitoRealEstateUrl } from "@/utils";
 import CommonButton from "../CommonButton/button";
-import LandingContainer from "../LandingContainer/LandingContainer";
+import Container from "@/components/Container/Container";
 import styles from "./search.module.scss";
 import { useRouter } from "next/router";
 import { FormEvent } from "react";
@@ -24,7 +24,7 @@ const Search = () => {
   };
   return (
     <section id="search" className={styles.search}>
-      <LandingContainer>
+      <Container>
         <div className={styles.searchContent}>
           <h2>Получите бесплатный отчет</h2>
           <form onSubmit={onSubmit}>
@@ -38,7 +38,7 @@ const Search = () => {
             </CommonButton>
           </form>
         </div>
-      </LandingContainer>
+      </Container>
     </section>
   );
 };

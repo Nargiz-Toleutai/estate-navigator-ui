@@ -1,0 +1,38 @@
+@use "../../styles/mixins.scss";
+@import "../../styles/mixins.scss";
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+
+  align-items: center;
+
+  h2 {
+    @include mixins.secondary;
+    margin-bottom: 8px;
+  }
+
+  p {
+    @include mixins.secondary;
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      @include mixins.noteHigh;
+      color: var(--secondary-text-color);
+      margin-top: 16px;
+    }
+  }
+}
+
+.errorImage {
+  opacity: 0.5;
+}
+
+@include for-phone-only {
+  .retryButton {
+    width: 100%;
+  }
+}
